@@ -31,7 +31,7 @@ def load_model(model_path):
 		model = dill.load(f)
 	print(model)
 
-modelpath = "/app/app/models/model.dill"
+modelpath = "/app/app/models/logreg_pipeline.dill"
 load_model(modelpath)
 
 @app.route("/", methods=["GET"])
@@ -53,7 +53,7 @@ def predict():
 			review = request_json["Review"]
 
 
-		logger.info(f'{dt} Data: Review={review}')
+		logger.info(f'{dt} Data: description={review}')
 		try:
 			preds = model.predict_proba(pd.DataFrame({"Review": [review]}))
 		except AttributeError as e:
