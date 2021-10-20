@@ -20,7 +20,7 @@ app.config.update(
 def get_prediction(review):
     body = {'Review': review}
 
-    myurl = "http://localhost:8180/predict"
+    myurl = "http://localhost:8380/predict"
     req = urllib.request.Request(myurl)
     req.add_header('Content-Type', 'application/json; charset=utf-8')
     jsondata = json.dumps(body)
@@ -60,4 +60,4 @@ def predict_form():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8181, debug=True)
+    app.run(host='0.0.0.0', port=8381, debug=True)
