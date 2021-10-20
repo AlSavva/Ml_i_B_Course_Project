@@ -20,7 +20,7 @@ app.config.update(
 def get_prediction(review):
     body = {'Review': review}
 
-    myurl = "http://0.0.0.0/:8180/predict"
+    myurl = "http://0.0.0.0:8180/predict"
     req = urllib.request.Request(myurl)
     req.add_header('Content-Type', 'application/json; charset=utf-8')
     jsondata = json.dumps(body)
