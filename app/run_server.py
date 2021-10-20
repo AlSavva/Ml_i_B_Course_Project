@@ -31,7 +31,7 @@ def load_model(model_path):
 		model = dill.load(f)
 	print(model)
 
-modelpath = "/app/app/models/logreg_pipeline.dill"
+modelpath = "/app/app/models/model.dill"
 load_model(modelpath)
 
 @app.route("/", methods=["GET"])
