@@ -1,4 +1,4 @@
-FROM python:3.9
+FROM python:3.7
 LABEL maintainer="savva2003@gmail.com"
 COPY . /app
 WORKDIR /app
