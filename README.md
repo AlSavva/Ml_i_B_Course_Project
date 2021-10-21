@@ -31,7 +31,7 @@ $ docker build -t alsavva/review-sentiment-predict .
 
 Здесь Вам нужно создать каталог локально и сохранить туда предобученную [модель(распаковать архив)](https://github.com/AlSavva/ML_in_Business/blob/Model_Preparate/model.zip) (<your_local_path_to_pretrained_models> нужно заменить на полный путь к этому каталогу)
 ```
-$ docker run -d -p 8380:8380 -p 8381:8381 -v <your_local_path_to_pretrained_models>:/app/app/models alsavva/review-sentiment-predict
+$ docker run -d -p 8180:8180 -p 8181:8181 -v <your_local_path_to_pretrained_models>:/app/app/models alsavva/review-sentiment-predict
 ```
 
-### Переходим на localhost:8381
+### Переходим на localhost:8181
