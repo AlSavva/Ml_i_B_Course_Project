@@ -53,7 +53,7 @@ def predict():
 			review = request_json["Review"]
 
 
-		logger.info(f'{dt} Data: description={review}')
+		logger.info(f'{dt} Data: Review={review}')
 		try:
 			preds = model.predict_proba(pd.DataFrame({"Review": [review]}))
 		except AttributeError as e:
@@ -74,5 +74,5 @@ def predict():
 if __name__ == "__main__":
 	print(("* Loading the model and Flask starting server..."
 		"please wait until server has fully started"))
-	port = int(os.environ.get('PORT', 8380))
+	port = int(os.environ.get('PORT', 8180))
 	app.run(host='0.0.0.0', debug=True, port=port)
